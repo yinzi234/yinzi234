@@ -9,7 +9,6 @@ title: 阿虚的二次元空间
 
 <center><h3 id="section"><a href="http://dota.weakyon.com">弱虚同样弱爆的DotaTeamPicker</a></h3></center>
 
-<h1>11</h1>
 <center><p><img src="log.jpg" alt="阿虚logo" /></p></center>
 
 <ul>
