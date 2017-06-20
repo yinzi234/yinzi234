@@ -117,12 +117,13 @@ xmlHttp = new XMLHttpRequest();
 1. 建立一个变量 xmlHttp 来引用即将创建的 XMLHttpRequest 对象。 
 
 2. 尝试在 Microsoft 浏览器中创建该对象： 
-3. 
-    尝试使用 Msxml2.XMLHTTP 对象创建它。 
 
-    如果失败，再尝试 Microsoft.XMLHTTP 对象。 
+   尝试使用 Msxml2.XMLHTTP 对象创建它。 
+
+   如果失败，再尝试 Microsoft.XMLHTTP 对象。 
 
 3. 如果仍然没有建立 xmlHttp，则以非 Microsoft 的方式创建该对
+
 象。 
 
 xmlHttp 应该引用一个有效的 XMLHttpRequest 对象，无论运行什么样
@@ -289,11 +290,13 @@ text：返回纯文本字符串。
 的函数，例如添加自定义HTTP头。在beforeSend中如果返回false可以取
 
 消本次ajax请求。XMLHttpRequest对象是惟一的参数。
+
 ```
             function(XMLHttpRequest){
                this;   //调用本次ajax请求时传递的options参数
             }
 ```
+
 9.complete：
 
 要求为Function类型的参数，请求完成后调用的回调函数（请求成功或失
@@ -301,6 +304,7 @@ text：返回纯文本字符串。
 败时均调用）。参数：XMLHttpRequest对象和一个描述成功请求类型的字
 
 符串。
+
 ```
           function(XMLHttpRequest, textStatus){
              this;    //调用本次ajax请求时传递的options参数
@@ -314,6 +318,7 @@ text：返回纯文本字符串。
 有两个参数。
          (1)由服务器返回，并根据dataType参数进行处理后的数据。
          (2)描述状态的字符串。
+
 ```
          function(data, textStatus){
             //data可能是xmlDoc、jsonObj、html、text等等
@@ -328,6 +333,7 @@ text：返回纯文本字符串。
 数，即XMLHttpRequest对象、错误信息、捕获的错误对象(可选)。ajax事
 
 件函数如下：
+
 ```
        function(XMLHttpRequest, textStatus, errorThrown){
           //通常情况下textStatus和errorThrown只有其中一个包含信息
@@ -352,6 +358,7 @@ text：返回纯文本字符串。
 jQuery.ajax时提供的dataType参数。函数返回的值将由jQuery进一步处
 
 理。
+
 ```
             function(data, type){
                 //返回处理后的数据
@@ -368,6 +375,7 @@ jQuery.ajax时提供的dataType参数。函数返回的值将由jQuery进一步�
 jQuery.ajax时提供的dataType参数。函数返回的值将由jQuery进一步处
 
 理。
+
 ```
             function(data, type){
                 //返回处理后的数据
@@ -463,11 +471,13 @@ false，即忽略头信息。
 与很多后端数据都是用xml存储,json的格式有些类似于我们的JavaScript
 
 中的对象字面量:
+
 ```
 {"name":"james",
   "hobby":"basketball",
     "son" : {"littleson":"er","bigson":"san"}
 }//这种就是一个简单的json格式数据,json数据代码量较小,但是可读性来说
+
 ```
 相较于xml有些dom一样的解析方法,xml的解析在js中最长用的解析方法就
 
@@ -478,6 +488,7 @@ json.stringify(),当然了,json和xml的区别还有很多
 ###ajax在jQuery中###
 
 实例：
+
 ```
 $.ajax({
                     type:"post",  //请求方式
@@ -495,6 +506,7 @@ $.ajax({
                     }
 });
 ```
+
 ###跨域请求###
 
 使用ajax请求的都是在本地和我们同源的文件,因为JavaScript在设计时
@@ -510,6 +522,7 @@ JSONP(JSON with Padding)是 JSON 的一种“使用模式”，可用于解决�
 就成为jsonp,当然了,jsonp和json可不是一回事,json是数据的一种传输
 
 格式,而jsonp是一种跨域请求方式
+
 ```
 <html>
 <body>
@@ -518,7 +531,9 @@ JSONP(JSON with Padding)是 JSON 的一种“使用模式”，可用于解决�
 </html>
 //script中的src没有同源限制,它可以加载其他任意文件.而jsonp利用的就是这一个功能展开的
 ```
+
 例子
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -533,7 +548,9 @@ JSONP(JSON with Padding)是 JSON 的一种“使用模式”，可用于解决�
 </body>
 </html>
 ```
+
 jQuery中jsonp的使用:
+
 ```
    $.ajax({
                 type:'get',

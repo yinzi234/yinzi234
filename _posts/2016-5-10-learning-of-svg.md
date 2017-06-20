@@ -112,12 +112,13 @@ SVG 有已经定义可以直接使用的形状元素：
       <circle cx="50" cy="50" r="50">
 </svg>
 ```
+
 其中cx，cy定义圆点坐标，未定义时默认圆点坐标（0，0）；
 
 r为半径
 
 <svg id="mypath" width="400" height="400" style="border:1px solid #00F5FF;">
-      <circle cx="50" cy="50" r="50">
+<circle cx="50" cy="50" r="50">
 </svg>
 
 ###2.矩形rect###
@@ -129,6 +130,7 @@ r为半径
  </svg>
 
 ```
+
 其中fill填充色；stroke-width边框宽度；stroke边框颜色
 
 <svg id="mypath" width="400" height="400" >
@@ -143,6 +145,7 @@ r为半径
   <ellipse cx="100" cy="100" rx="100" ry="50" fill="#fff" stroke="#f00"/>  
 </svg>
 ```
+
 其中rx，ry横向纵向半径
 
 ###4.直线line###
@@ -154,17 +157,18 @@ r为半径
 </svg>
 
 ```
+
 其中x1,y1 起点的位置；x2,y2 终点的位置
 
 
 ###5.折线polyline###
-
 
 ```
 <svg id="mypath" width="400" height="400" >
   <polyline points="0,0 0,20 20,20 20,40 40,40 40,60" style="fill:white;stroke:red;stroke-width:2" />
 </svg>
 ```
+
 格式points"xi,yi"
 
 ###5.路径path###
@@ -172,6 +176,7 @@ r为半径
 ```
 <path d="M250 150 L150 350 L350 350 Z" />
 ```
+
 这是开始于位置 250 150，到达位置 150 350，然后从那里开始到 350 
 
 350，最后在 250 150 关闭的路径。
@@ -256,6 +261,7 @@ feSpotLight
 style="fill:#ff0000;stroke:#000000;
 stroke-width:2;filter:url(#Gaussian_Blur)"/>
 ```
+
 <filter> 用来定义 SVG 滤镜。；<filter> 必须嵌套在 <defs> 标签内。
 
 <filter> 标签的 id 属性可为滤镜定义一个唯一的名称（同一滤镜可被文档中的多个元素使用）
@@ -317,6 +323,7 @@ stop-opacity:1"/>
 <ellipse cx="230" cy="200" rx="110" ry="100"
 style="fill:url(#grey_blue)"/>
 ```
+
 <radialGradient> 的 id 可为渐变定义一个唯一的名称
 
 fill:url(#grey_blue) 把 ellipse 元素链接到此渐变

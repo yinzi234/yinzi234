@@ -252,6 +252,7 @@ uw=name.replace(/\b\w+\b/g, function(word){
 ###replace例子###
 
 一：
+
 ```
 <script type="text/javascript">
 
@@ -295,15 +296,13 @@ placeholder  : 输入框提示信息
 
    –例子 : 微博的密码框提示
 
-autocomplete :  是否保存用户输入值
-
-   –默认为on，关闭提示选择off
+autocomplete :  是否保存用户输入值 –默认为on，关闭提示选择off
 
 autofocus  : 指定表单获取输入焦点
 
-list和datalist :  为输入框构造一个选择列表
+list和datalist :  为输入框构造一个选择列表  –list值为datalist
 
-   –list值为datalist标签的id
+标签的id
 
 required  : 此项必填，不能为空
 
