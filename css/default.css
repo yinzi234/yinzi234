@@ -4,6 +4,7 @@ body {
     font-family: Helvetica Neue,Courier New,Microsoft YaHei;
     text-rendering: optimizeLegibility;
 	font-family：Microsoft YaHei;
+	background-color:#eee;
 }
 a {
     color:#666;
@@ -21,8 +22,8 @@ section{
 	display:none;
 }
 h3{
-	color: #69CBE2;
-	border-bottom: thick dotted #69CBE2;
+	color: #4693A6;
+	border-bottom: thick dotted #4693A6;
 	padding-bottom: 10px;
 }
 header {
@@ -56,6 +57,7 @@ header h1 small {
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
+	background-color: #F4F4F4;
 }
 #account {
     color:#aaa;
