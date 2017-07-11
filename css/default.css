@@ -82,7 +82,7 @@ code {
 }
 pre {
     background-color:#f5f2f0;
-    padding:1em
+    padding:0;
 	margin: 2em 2em;
     overflow:auto;
     margin-bottom:40px;
@@ -98,9 +98,10 @@ h4+pre, h3+pre {
     margin-top:20px;
 }
 pre code{
+	padding:1em;
+	margin: 2em 2em;
     background-color:transparent;
     border:none;
-    padding:0;
     word-wrap:normal;
 }
 .highlight{
