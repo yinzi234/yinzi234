@@ -22,6 +22,7 @@ section{
 	display:none;
 }
 h3{
+	font-size: 23px;
 	color: #4693A6;
 	border-bottom: thick dotted #4693A6;
 	padding-bottom: 10px;
@@ -81,12 +82,14 @@ code {
     word-wrap:break-word;
 }
 pre {
-    background-color:#f5f2f0;
-    padding:0;
-	margin: 2em 2em;
-    overflow:auto;
+    white-space: pre-wrap;
+	word-wrap: break-word;
+	background-color: #f5f2f0;
+	padding: 2em 2em;
+    overflow:hidden;
     margin-bottom:40px;
     font-size:1.2em;
+	line-height: 30px;
     border: 1px solid #eee;
     -webkit-border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
