@@ -4,19 +4,19 @@ body {
     font-family: Helvetica Neue,Courier New,Microsoft YaHei;
     text-rendering: optimizeLegibility;
 	font-family：Microsoft YaHei;
-	background-color:#eee;
+	background-color:#f5f5d5;
 }
 a {
     color:#666;
 }
 h2 {
-    border-style: dashed;
+    border-bottom-style: dashed;
 	border-width: 2px;
 	border-color: #F4B3B3;
-	padding: 4px 4px 4px 10px;
+	padding: 15px 9px 15px 11px;
 	margin-bottom: 20px;
-	font-size: 22px;
-	color: #F08989;
+	font-size: 43px;
+	color: #E49595;
 }
 section{
 	display:none;
@@ -57,7 +57,7 @@ header h1 small {
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-	background-color: #F4F4F4;
+	background-color: #f5f5d5;
 }
 #account {
     color:#aaa;
@@ -75,22 +75,24 @@ code {
     background:#eee;
     border:1px solid #ccc;
     padding:0 5px;
-    font-family:Microsoft YaHei;
+    font-family:Consolas, Monaco, 'Andale Mono', monospace;
     line-height:14px;
     font-size:14px;
     word-wrap:break-word;
 }
 pre {
-    background-color:#FFF0F0;
-    padding:15px;
+    background-color:#f5f2f0;
+    padding:1em
+	margin: 2em 2em;
     overflow:auto;
     margin-bottom:40px;
-    font-size:14px;
+    font-size:1.2em;
     border: 1px solid #eee;
     -webkit-border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 1em;
     color:#303030;
+	border:0.3em solid #e0dfcc;
 }
 h4+pre, h3+pre {
     margin-top:20px;
