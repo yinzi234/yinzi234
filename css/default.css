@@ -57,7 +57,7 @@ header h1 small {
     margin-bottom:20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
+    padding: 0px 15px;
 	background-color: #FFF;
 }
 #account {
@@ -240,8 +240,10 @@ svg {
 	margin-top: -7.78%;
 }
 .single-post-svg {
-	fill: #fff !important;
+	fill: #1c1c1c !important;
 	position: relative;
+	width: 800px;
+	left: -15px;
 	/* margin-bottom: -1px; */
 }
 .single-svg-bottom {
