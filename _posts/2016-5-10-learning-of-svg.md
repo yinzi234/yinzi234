@@ -117,9 +117,6 @@ SVG 有已经定义可以直接使用的形状元素：
 
 r为半径
 
-<svg id="mypath" width="400" height="400" style="border:1px solid #00F5FF;">
-<circle cx="50" cy="50" r="50">
-</svg>
 
 ###2.矩形rect###
 
@@ -133,9 +130,6 @@ r为半径
 
 其中fill填充色；stroke-width边框宽度；stroke边框颜色
 
-<svg id="mypath" width="400" height="400" >
-    <rect x="10" y="10" width="100" height="100" stroke="red" fill="#ccc" >
- </svg>
 
 ###3.椭圆ellipse###
 
