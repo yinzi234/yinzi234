@@ -296,7 +296,7 @@ svg {
 	background-color: #000;
 	opacity: 0.3;
 	z-index: -1;
-	background: url(http://yincheng.site/wp-content/uploads/2016/10/bg-small-crop.jpg) no-repeat;
+	background: url(../pic/background.jpg) no-repeat;
 }
 .site-footer {
 	background-color: #17191B;
