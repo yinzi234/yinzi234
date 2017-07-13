@@ -8,6 +8,6 @@ kramdown:
     - footnotes
     - smart
   use_coderay: true
-  syntax_highlighter: rouge
+  highlighter: rouge
   coderay:
     coderay_line_numbers:  nil
