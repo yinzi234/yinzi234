@@ -177,10 +177,6 @@ pre code{
 
 
 /* header */
-.site-header {
-					    background: url(http://yincheng.site/wp-content/uploads/2016/10/bg-small-crop.jpg) no-repeat;
-					    background-size: cover;
-					}
 .svg-container {
     width: 100%;
     height: 0;
@@ -300,6 +296,7 @@ svg {
 	background-color: #000;
 	opacity: 0.3;
 	z-index: -1;
+	background: url(http://yincheng.site/wp-content/uploads/2016/10/bg-small-crop.jpg) no-repeat;
 }
 .site-footer {
 	background-color: #17191B;
@@ -324,4 +321,15 @@ svg {
 }
 .post-inner.no-thumb {
 	padding: 60px 30px 30px;
+}
+
+#navbar{
+	padding:0px	10px;
+	font-size:1em;
+	color:#f9f9f9;
+	letter-spacing: 5px;
+	font-weight: bolder;
+}
+#navbar a{
+	color:#f9f9f9;
 }
