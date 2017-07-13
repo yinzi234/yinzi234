@@ -296,8 +296,7 @@ svg {
 	background-color: #000;
 	opacity: 0.3;
 	z-index: -1;
-	background: url(../pic/background.png) no-repeat;
-	background-size：cover;
+	background: url(../pic/background.png);
 }
 .site-footer {
 	background-color: #17191B;
