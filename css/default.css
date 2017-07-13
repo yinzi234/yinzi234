@@ -11,7 +11,15 @@ a {
     color:#666;
 	text-decoration:none;
 }
-
+h2 {
+    border-bottom-style: dashed;
+	border-width: 2px;
+	border-color: #F4B3B3;
+	padding: 15px 9px 15px 11px;
+	margin-bottom: 20px;
+	font-size: 43px;
+	color: #E49595;
+}
 section{
 	display:none;
 }
