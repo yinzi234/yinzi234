@@ -1,10 +1,7 @@
 baseurl: 
 pygments: true
 markdown: redcarpet
-theme: jekyll-theme-cayman
 redcarpet:
     input: GFM
     extensions:
        - no_intra_emphasis
-
-theme: jekyll-theme-cayman
