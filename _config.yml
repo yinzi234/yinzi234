@@ -1,6 +1,7 @@
 baseurl: 
 pygments: true
 markdown: redcarpet
+theme: jekyll-theme-cayman
 redcarpet:
     input: GFM
     extensions:
