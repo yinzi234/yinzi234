@@ -3,13 +3,13 @@ layout: default
 title: 正则学习
 ---
 
-##正则##
+## 正则 ##
 
 正则表达式是被用来匹配字符串中的字符组合的模式。在JavaScript中，正则表达式也是对象。这种模
 
 式可以被用于RegExp的exec和test方法以及 String的match、replace、search和split方法。
 
-###JavaScript RegExp对象###
+### JavaScript RegExp对象 ###
 
 RegExp 对象表示正则表达式，它是对字符串执行模式匹配的强大工具。
 
@@ -31,7 +31,7 @@ var re = new RegExp("ab+c");
 
 ```
 
-###参数###
+### 参数 ###
 
 参数 pattern 是一个字符串，指定了正则表达式的模式或其他正则表达式。
 
@@ -41,7 +41,7 @@ var re = new RegExp("ab+c");
 
 式，而不是字符串，则必须省略该参数。
 
-###RegExp对象属性###
+### RegExp对象属性 ###
 
 global：RegExp 对象是否具有标志 g。
 
@@ -53,7 +53,7 @@ multiline：RegExp 对象是否具有标志 m。
 
 source：正则表达式的源文本。
 
-###RegExp对象方法###
+### RegExp对象方法 ###
 
 compile：编译正则表达式。
 
@@ -128,7 +128,7 @@ test方法是使用正则表达式的最简单和最快的方法。如果该rege
 
 它返回false。
 
-###支持正则表达式的String对象的方法###
+### 支持正则表达式的String对象的方法 ###
 
 search：检索与正则表达式相匹配的值。
 
@@ -138,7 +138,7 @@ replace：替换与正则表达式匹配的子串。
 
 split：把字符串分割为字符串数组。
 
-###string.search(regexp)###
+### string.search(regexp) ###
 
 search方法和indexOf方法类似，只是它接收一个正则表达式对象作为参数而不是一个字符串。如果找
 
@@ -156,7 +156,7 @@ var pos = text.search(/["']/)
 结果为18
 ```
 
-###strng.match(regexp)和stringObject.match(searchvalue)###
+### strng.match(regexp)和stringObject.match(searchvalue) ###
 
 match方法让字符串和一个正则表达式进行匹配。它依据g标识来决定如何进行匹配。如果没有g标识，
 
@@ -170,7 +170,7 @@ alert(str.match("world!"));     //结果world
 console.log(str.match(/world/g));  //结果[world,world]
 ```
 
-###string.split(separator,limit)###
+### string.split(separator,limit) ###
 
 split方法把这个string分割成片段来创建一个字符串数组。可选参数limit可以限制被分割的片段数
 
@@ -181,7 +181,7 @@ var digits = '0123456789';
         var a = digits.split('',5);  //a是['0,'1','2','3','4','5'];
 ```
 
-###stringObject.replace(regexp/substr,replacement)###
+### stringObject.replace(regexp/substr,replacement) ###
 
 replace方法对string进行查找和替换操作，并返回一个新的字符串。参数searchValue可以是一个字
 
@@ -249,7 +249,7 @@ uw=name.replace(/\b\w+\b/g, function(word){
   );　　
 ```
 
-###replace例子###
+### replace例子 ###
 
 一：
 
@@ -290,7 +290,7 @@ document.write(name.replace(/(\w+)\s*, \s*(\w+),\d+/, function($2){return $2}));
 要想返回匹配的单个组元素，必须将匹配的组都作为参数。
 
 
-###表单特性###
+### 表单特性 ###
 
 placeholder  : 输入框提示信息
 
@@ -310,7 +310,7 @@ Pattern: 正则验证 pattern="\d{1,5}“
 
 Formaction在submit里定义提交地址
 
-###元字符表###
+### 元字符表 ###
 
 元字符是正则表达式的一部分，当我们要匹配正则表达式本身时，必须对这些元字符转义.下面是正则表
 

@@ -3,7 +3,7 @@ layout: default
 title: svg学习
 ---
 
-##SVG学习##
+## SVG学习 ##
 
 SVG 指可伸缩矢量图形，用来定义用于网络的基于矢量的图形。
 
@@ -15,7 +15,7 @@ SVG 代码以svg元素开始，包括开启标签svg和关闭标签/svg。这是
 
  属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。
 
-###SVG优势###
+### SVG优势 ###
 
 SVG 可被非常多的工具读取和修改（比如记事本）
 
@@ -38,9 +38,9 @@ SVG 文件是纯粹的 XML
 与 Flash 相比，SVG 最大的优势是与其他标准（比如 XSL 和 DOM）相兼容。而 Flash 则是未开源的私有技术。
 
 
-###SVG使用方法###
+### SVG使用方法 ###
 
-###1.直接写入html文档###
+### 1.直接写入html文档 ###
 
 ```
 <body>
@@ -50,7 +50,7 @@ SVG 文件是纯粹的 XML
 </body>
 ```
 
-###2.embed###
+### 2.embed ###
 
 所有主流浏览器支持，允许使用脚本
 
@@ -61,7 +61,7 @@ pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
 ```
 
-###3.object###
+### 3.object ###
 
 新浏览器支持，不允许使用脚本
 
@@ -69,7 +69,7 @@ pluginspage="http://www.adobe.com/svg/viewer/install/" />
 <object data="test.svg" width="200" height="200" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
 ```
 
-###4.iframe###
+### 4.iframe ###
 
 大部分浏览器支持
 
@@ -79,7 +79,7 @@ pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
 ```
 
-###SVG元素属性###
+### SVG元素属性 ###
 
 公共属性： 
 
@@ -101,11 +101,11 @@ style(stroke, stroke-width, fill), transform, id, class 等
 
 <polygon>:"points"
 
-###SVG基本形状###
+### SVG基本形状 ###
 
 SVG 有已经定义可以直接使用的形状元素：
 
-###1.圆形circle###
+### 1.圆形circle ###
 
 ```
 <svg id="mypath" width="400" height="400" style="border:1px solid #00F5FF;">
@@ -118,7 +118,7 @@ SVG 有已经定义可以直接使用的形状元素：
 r为半径
 
 
-###2.矩形rect###
+### 2.矩形rect ###
 
 
 ```
@@ -131,7 +131,7 @@ r为半径
 其中fill填充色；stroke-width边框宽度；stroke边框颜色
 
 
-###3.椭圆ellipse###
+### 3.椭圆ellipse ###
 
 
 ```
@@ -142,7 +142,7 @@ r为半径
 
 其中rx，ry横向纵向半径
 
-###4.直线line###
+### 4.直线line ###
 
 
 ```
@@ -155,7 +155,7 @@ r为半径
 其中x1,y1 起点的位置；x2,y2 终点的位置
 
 
-###5.折线polyline###
+### 5.折线polyline ###
 
 ```
 <svg id="mypath" width="400" height="400" >
@@ -165,7 +165,7 @@ r为半径
 
 格式points"xi,yi"
 
-###5.路径path###
+### 5.路径path ###
 
 ```
 <path d="M250 150 L150 350 L350 350 Z" />
@@ -199,7 +199,7 @@ Z = closepath
 
 由于绘制路径的复杂性，因此强烈建议您使用 SVG 编辑器来创建复杂的图形。
 
-###SVG滤镜###
+### SVG滤镜 ###
 
 可用滤镜：
 
@@ -242,7 +242,7 @@ fePointLight
 feSpotLight
 //在单个svg元素上可以使用多个滤镜
 
-###高斯模糊###
+### 高斯模糊 ###
 
 ```
 <defs>
@@ -267,7 +267,7 @@ filter:url 把元素链接到滤镜。当链接滤镜 id 时，必须使用 # �
 
 in="SourceGraphic" 定义了由整个图像创建效果
 
-###渐变###
+### 渐变 ###
 
 线性渐变 linearGradient
 

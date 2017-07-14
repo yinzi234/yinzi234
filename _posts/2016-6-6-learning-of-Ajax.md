@@ -3,7 +3,7 @@ layout: default
 title: Ajax学习
 ---
 
-##Ajax##
+## Ajax ##
 
 Ajax 是 Asynchronous JavaScript and XML（以及DHTML 等）的缩写.
 
@@ -29,7 +29,7 @@ span 和其他动态 HTML 元素来标记 HTML。
 
 技术，也可以说Ajax是一个新的思路，一个新的架构！
 
-###Ajax的基本工作原理###
+### Ajax的基本工作原理 ###
 
 在一般的 Web 应用程序中，用户填写表单字段并单击 Submit 按钮。然后
 
@@ -80,7 +80,7 @@ JavaScript 代码而不是 直接发送给服务器。相反，JavaScript 代码
 全部强大力量。
 
 
-###XMLHttpRequest 对象###
+### XMLHttpRequest 对象 ###
 
 open()：建立到服务器的新请求。
 
@@ -130,7 +130,7 @@ xmlHttp 应该引用一个有效的 XMLHttpRequest 对象，无论运行什么�
 
 的浏览器。
 
-###Ajax中的请求/响应###
+### Ajax中的请求/响应 ###
 
 发出请求：Ajax 应用程序中基本相同的流程：
 
@@ -194,7 +194,7 @@ function updatePage() {
 }
 ```
 
-###创建一个XMLHttpRequest对象###
+### 创建一个XMLHttpRequest对象 ###
 
 ```
  var xhr =null;
@@ -209,7 +209,7 @@ function updatePage() {
 ```
 
 
-###ajax方法参数###
+### ajax方法参数 ###
 
 1.url: 
 
@@ -435,7 +435,7 @@ false，即忽略头信息。
 
 常在本地和远程的内容编码不同时使用。
 
-###XML和json###
+### XML和json ###
 
 当我们完成了发送请求并且从后端获取了数据后,我们应该再进一步的去思
 
@@ -485,7 +485,7 @@ false，即忽略头信息。
 
 json.stringify(),当然了,json和xml的区别还有很多
 
-###ajax在jQuery中###
+### ajax在jQuery中 ###
 
 实例：
 
@@ -507,7 +507,7 @@ $.ajax({
 });
 ```
 
-###跨域请求###
+### 跨域请求 ###
 
 使用ajax请求的都是在本地和我们同源的文件,因为JavaScript在设计时
 

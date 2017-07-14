@@ -3,7 +3,7 @@ layout: default
 title: AngularJS学习
 ---
 
-##AngularJS##
+## AngularJS ##
 
 AngularJS[1]  诞生于2009年，由Misko Hevery 等人创建，后为
 
@@ -33,9 +33,9 @@ AngularJS主要考虑的是构建CRUD应用，不适合游戏，图形界面编�
 
 种DOM操作很频繁也很复杂的应用。
 
-###js文件目录###
+### js文件目录 ###
 
-###app.js###
+### app.js ###
 
 项目的配置文件，路由的配置，模块的依赖可以写在这里。demo：
 
@@ -92,7 +92,7 @@ var phonecatApp = angular.moudle("phonecatApp",[]);
 
 目录。
 
-###controller.js###
+### controller.js ###
 
 项目的控制器文件，所有控制器写在这里。demo：
 
@@ -101,7 +101,7 @@ var phonecatControllers = angular.module('phonecatControllers', []);
 phonecatControllers.controller("控制器名",['$scope' ,'$http',function($scope,$http){...}]);
 ```
 
-###services.js###
+### services.js ###
 
 项目的服务文件，根据angualr的依赖注入机制，可以自己写服务，然后在
 
@@ -133,7 +133,7 @@ phonecatServices.factory('Phone', function(){
 
 factory，这样的话在controller.js写控制器的时候，就可以注入使用了
 
-###filters.js###
+### filters.js ###
 
 项目过滤器文件，看过大概看了一下angular.js内置的一些过滤器（如
 
@@ -158,7 +158,7 @@ phonecatFilter.filter('touuper', function() {
 });
 ```
 
-###directives.js###
+### directives.js ###
 
 项目的指令文件，这里写的是项目中，我们自己自定义的标签，制定的标签
 
@@ -200,7 +200,7 @@ templateUrl: ""  //模版路径
 });
 ```
 
-###测试###
+### 测试 ###
 
 写hello world：
 
@@ -339,7 +339,7 @@ function Cntl2($scope) { //$scope注入的作用域
 //模型和视图分离，但是他们两者确实是同步的
 ```
 
-###实例：遍历排序###
+### 实例：遍历排序 ###
 
 这里实现的功能是这样的，在前台遍历phones的对象数组，然后可以按照年
 
@@ -434,7 +434,7 @@ ng-controller 指得是包裹的内容中是在控制器PhoneListCtrl的控制
 
 像这样<span ng-bind="bind"></span>。
 
-###定义数组###
+### 定义数组 ###
 
 在控制器文件中直接定义一个数组，让其在模版文件中用ng-repeat指令构
 

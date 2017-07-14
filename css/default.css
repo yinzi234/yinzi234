@@ -3,22 +3,26 @@
 body {
     font-family: Helvetica Neue,Courier New,Microsoft YaHei;
     text-rendering: optimizeLegibility;
-	font-family：Microsoft YaHei;
+	font-family: Microsoft YaHei;
 	background-color: #1c1c1c;
 	margin:0;
+	color: #50545C;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+	line-height: 1.1;
 }
 a {
     color:#666;
 	text-decoration:none;
 }
 h2 {
-    border-bottom-style: dashed;
-	border-width: 2px;
-	border-color: #F4B3B3;
 	padding: 15px 9px 15px 11px;
 	margin-bottom: 20px;
-	font-size: 43px;
-	color: #E49595;
+	font-size: 36px;
+	text-align: center;
 }
 section{
 	display:none;
@@ -53,11 +57,11 @@ header h1 small {
 }
 #content {
     display:block;
-    width: 770px;
+    width: 900px;
     margin-bottom:20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px 15px;
+    padding: 10px 70px;
 	background-color: #FFF;
 }
 #account {
@@ -69,8 +73,9 @@ header h1 small {
     font-size:14px;
 }
 p {
-    margin-bottom:20px;
+	margin: 0 0 10px;
     line-height:1.4em;
+	text-indent: 2em;
 }
 code {
     background:#eee;

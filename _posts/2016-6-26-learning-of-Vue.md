@@ -3,7 +3,7 @@ layout: default
 title: Vue学习
 ---
 
-##Vue##
+## Vue ##
 
 数据驱动的组件，为现代化的 Web 界面而生。
 
@@ -19,9 +19,9 @@ Vue.js 自身不是一个全能框架——它只聚焦于视图层。因此它�
 
 一起使用时，Vue.js 也能完美地驱动复杂的单页应用。
 
-###Vue的使用教程###
+### Vue的使用教程 ###
 
-###Reactive Directives（响应式指令）###
+### Reactive Directives（响应式指令） ###
 Reactive Directives可以绑定在Vue实例或者在Vue实例上下文中求值的表达式上，当绑定的对象发生改变时，指令中的update()会在下一个系统单位时间发生异步响应，我们来看看具体的用法：
 
 v-text:更新元素的textContent，事实上在html中{{mustache}}形式的插入值也会被编译为针对一个textNode的v-text指令。
@@ -214,7 +214,7 @@ v-events：这个指令也只能结合接下来讲到的v-component指令使用�
 
 当子ViewModel调用this.$emit('change', …)时会触发父ViewModel的onChildChange()方法，并且把emit函数中附加的参数传给onChildChange()方法。
 
-###Literal Directives(字面指令)###
+### Literal Directives(字面指令) ###
 
 字面指令并没有绑定到某一个对象上，字面指令是把它们的参数作为纯字符串传给bind()函数中执行一次，字面指令可以接受{{mustache}}表达式，但是该表达式只会在编译阶段执行一次，不会绑定数据的改变：
 
@@ -257,8 +257,8 @@ v-partial：将当前dom元素中的innerHTML替换为事先注册的partial，�
 ```
 
 v-transition：为当前dom元素在指定参数值作用时添加动画效果
-
-###Empty Directives(字面指令)###
+ 
+### Empty Directives(字面指令) ###
 v-pre：这个指令是通知编译器跳过当前dom元素和其所有子元素，这是为了在我们编程过程中对无需编译的元素节省编译时间
 
  
@@ -270,7 +270,7 @@ v-cloak：在当前元素编译完成之前改指令都会存在，我们一般�
 ```
 
 
-###computed计算属性函数中不能使用vm变量###
+### computed计算属性函数中不能使用vm变量 ###
 
 在计算属性的函数中，不能使用Vue构造函数返回的vm变量，因为此时vm还未返回，依然处于Vue内部构造函数过程中，遂只能使用this来代替vm。
 若要使用typescript，可使用以下方法来实现代码智能感知
@@ -282,7 +282,7 @@ vm = vm || this;
 另：其他不能用vm变量，只能使用this变量的地方，都可以通过此方法来获得Typescript的智能感知和代码语法检查，比如mounted生命周期系列函数等。
 不过模板里的vm引用Typescript无能为力，只能等待ts支持vue的jsx语法了
 
-###计算属性中不能引用其他计算属性？###
+### 计算属性中不能引用其他计算属性？ ###
 
 官方教程中没有找到相关说明(应该是我没找到)，从使用角度而言大致可以总结出以下结论：
 
@@ -328,7 +328,7 @@ var vm = new Vue({
 
 原因很容易理解，如果最终没有引用或依赖任何非计算属性，那么计算属性在计算时会陷入死循环。
 
-###vue2.0中若使用组件嵌套，则在父组件执行\$forceUpdate()之前模板中\$children为空数组###
+### vue2.0中若使用组件嵌套，则在父组件执行\$forceUpdate()之前模板中\$children为空数组 ###
 
 触发这个问题有以下几个前提：
 
@@ -429,7 +429,7 @@ child
 
 至于导致此问题的原因只能通过阅读vue2.0版本的源码才能了解了。
 
-###若父组件的template或render函数中无引用slot元素，则\$children恒等于空数组###
+### 若父组件的template或render函数中无引用slot元素，则\$children恒等于空数组 ###
 
 此问题关联上面第3个问题。
 触发此问题的前提：
@@ -535,7 +535,7 @@ child
 </div>
 ```
 
-###Vue 的组件化实践###
+### Vue的组件化实践 ###
 
 组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js 的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。
 

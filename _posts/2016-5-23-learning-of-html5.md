@@ -3,13 +3,13 @@ layout: default
 title: HTML5学习
 ---
 
-##HTML5声明##
+## HTML5声明 ##
 
 ```
 <!DOCTYPE html>
 ```
 
-###HTML5兼容问题###
+### HTML5兼容问题 ###
 
 HTML5提出的新的元素不被IE6-8识别，这些新元素不能作为父节点包裹子
 
@@ -22,9 +22,9 @@ html5shiv.min.js"></script>
 <![endif]>
 ```
 
-###HTML5新元素###
+### HTML5新元素 ###
 
-###新块级元素###
+### 新块级元素 ###
 
 HTML5提供了新的语义元素来证明Web页面的不同部分：
 
@@ -63,7 +63,7 @@ figcaption为figure定义标题，置于 "figure" 元素的第一个或最
 </figure> 
 ```
 
-###新元素###
+### 新元素 ###
 
 time：用来表现时间或日期
 
@@ -121,7 +121,7 @@ header,nav,footer{display:block}
 </style>      
 ```
 
-###新多媒体元素###
+### 新多媒体元素 ###
 
 audio:音频内容
 
@@ -155,9 +155,9 @@ track:用于规定字幕文件或其他包含文本的文件，当媒体播放�
 
 是可见的
 
-###FORMs###
+### FORMs ###
 
-###输入型控件###
+### 输入型控件 ###
 
 email :  电子邮箱文本框，跟普通的没什么区别
 
@@ -193,7 +193,7 @@ week  : 显示周
 
 month  : 显示月
 
-###表单特性###
+### 表单特性 ###
 
 placeholder  : 输入框提示信息
 
@@ -215,7 +215,7 @@ Pattern: 正则验证 pattern="\d{1,5}“
 
 Formaction在submit里定义提交地址
 
-###新的选择器###
+### 新的选择器 ###
 
 querySelector：选择满足条件的第一个元素。
 
@@ -233,7 +233,7 @@ getElementsByClassName：根据class选择元素，参数为元素的class
 var hovered=document.querySelector("td:hover");        
 ```
 
-###classList###
+### classList ###
 
 –length:  class的长度
 
@@ -245,7 +245,7 @@ var hovered=document.querySelector("td:hover");
 
 元素的classList属性返回的是一个{}对象－类数组。
 
-###window.JSON新方法###
+### window.JSON新方法 ###
 
 JSON.parse():把字符串转成json（字符串中的属性要严格的加上引号）
 
@@ -271,7 +271,7 @@ var aStr=JSON.stringify(a) ;
 var b=JSON.parse(aStr); //实现ｂ对ａ的拷贝         
 ```
 
-###内联SVG###
+### 内联SVG ###
 
 VG和Canvas的区别：一种使用 XML 描述 2D 图形的语言，Canvas 通过 
 
@@ -297,13 +297,13 @@ SVG：不依赖分辨率
 
 不合适游戏应用
 
-###新的input###
+### 新的input ###
 
 color、date、datetime、datetime-local、email、month、
 
 number、range、search、tel、time、url、week
 
-###WEB存储###
+### WEB存储 ###
 
 localStorage - 没有时间限制的数据存储;//对象存储的数据没有时间限
 
@@ -319,7 +319,7 @@ if(typeof(Storage)!=="undefined"){//判断是否可以使用web存储
 }       
 ```
 
-###应用程序缓存###
+### 应用程序缓存 ###
 
 离线浏览 - 用户可在应用离线时使用它们，速度 - 已缓存资源加载
 
@@ -330,7 +330,7 @@ if(typeof(Storage)!=="undefined"){//判断是否可以使用web存储
 使用时需要在<html>标签中添加manifest属性，并配置manifest文件;
 
 
-###Web Worker###
+### Web Worker ###
 
 运行在后台的 JavaScript，不会影响页面的性能;
 

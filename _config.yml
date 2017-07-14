@@ -1,5 +1,4 @@
 baseurl: 
-pygments: true
 markdown: kramdown
 kramdown:
   input: GFM

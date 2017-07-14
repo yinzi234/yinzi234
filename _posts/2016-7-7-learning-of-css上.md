@@ -3,7 +3,7 @@ layout: default
 title: css学习下
 ---
 
-##position##
+## position ##
 
 如果没有定位，我们做出来的网页将会是按部就班的自上而下、自左而右的平铺在浏览器上，外加通
 
@@ -19,7 +19,7 @@ position一共有四个可选属性：static/relative/absolute/fixed。其中sta
 
 它一样。
 
-###relative###
+### relative ###
 
 如果设定 position:relative，就可以使用 top,bottom,left 和 right 来相对于元素在文档
 
@@ -35,7 +35,7 @@ position一共有四个可选属性：static/relative/absolute/fixed。其中sta
 }
 ```
 
-###absolute###
+### absolute ###
 
 当指定 position:absolute 时，元素就脱离了文档【即在文档中已经不占据位置了】，可以准确
 
@@ -50,7 +50,7 @@ position一共有四个可选属性：static/relative/absolute/fixed。其中sta
 }
 ```
 
-###relative+absolute###
+### relative+absolute ###
 
 如果我们给 div-1 设置 relative 定位，那么 div-1 内的所有元素都会相对 div-1 定位。如
 
@@ -111,7 +111,7 @@ position一共有四个可选属性：static/relative/absolute/fixed。其中sta
 
 ```
 
-###fixed###
+### fixed ###
 
 其实fixed和absolute是一样的，唯一的区别在于：absolute元素是根据最近的定位上下文确定位
 
@@ -131,7 +131,7 @@ absolute的定位相对于前两者要复杂许多。如果为absolute设置了t
 
 览器边界定位。
 
-##display##
+## display ##
 
 display 的属性值有：none|inline|block|inline-block|list-item|run-in|table|
 
@@ -222,7 +222,7 @@ table-caption：     此元素会作为一个表格标题显示（类似 caption
 
 inherit：     规定应该从父元素继承 display 属性的值。
 
-###内联元素###
+### 内联元素 ###
 
 和其他元素都在一行上；
 
@@ -232,7 +232,7 @@ inherit：     规定应该从父元素继承 display 属性的值。
 
 a、span、br、i、em、strong、label、q、var、cite、code
 
-###块级元素###
+### 块级元素 ###
 
 每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一
 
@@ -246,7 +246,7 @@ a、span、br、i、em、strong、label、q、var、cite、code
 
 div、p、h1...h6、ol、ul、dl、table、address、blockquote 、form
 
-###内联块状元素###
+### 内联块状元素 ###
 
 和其他元素都在一行上；
 
@@ -254,7 +254,7 @@ div、p、h1...h6、ol、ul、dl、table、address、blockquote 、form
 
 常用的内联块状元素有：img、input
 
-##float##
+## float ##
 
 float 属性定义元素在哪个方向浮动。以往这个属性总应用于图像，使文本围绕在图像周围，不过在 
 
@@ -279,8 +279,8 @@ none                    默认值。元素不浮动，并显示在其在文本�
 inherit                 规定应该从父元素继承 float 属性的值。
 
 比较常用的两个属性值是左浮动和右浮动。
-
-###文字环绕效果###
+ 
+### 文字环绕效果 ###
 
 浮动的初衷就是为了文字环绕效果。
 
@@ -310,7 +310,7 @@ inherit                 规定应该从父元素继承 float 属性的值。
 
 content 元素设置了左浮动，使div元素脱离文档流，文字在其周围坏绕显示。
 
-###父元素高度塌陷###
+### 父元素高度塌陷 ###
 
 以div元素为例。div元素的高度会通过内容自动撑开。也就是说，内容有多少，高度就有多高。但是
 
@@ -334,7 +334,7 @@ Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello Wo
 }
 ```
 
-###清除浮动的方法###
+### 清除浮动的方法 ###
 
 1:父元素底部添加空div，然后在添加属性clear : both。
 
@@ -387,7 +387,7 @@ Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello Wo
 }
 ```
 
-###float元素去空格化###
+### float元素去空格化 ###
 
 在平时的编码中，为了要符合HTML编码规范，都会为html标签添加缩进，达到美观的效果。可是缩进
 
@@ -397,13 +397,13 @@ Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello Wo
 
 同。
 
-###float元素块状化###
+### float元素块状化 ###
 
 在为内联元素设置浮动属性之后，display属性由inline变成block。并且可以为内联元素设置宽
 
 高。使用float加width属性可以实现一些简单的固定宽度的布局效果。
 
-###float流体布局###
+### float流体布局 ###
 
 1：单侧固定，右侧自适应的布局。
 
