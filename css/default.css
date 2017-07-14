@@ -251,7 +251,8 @@ pre code{
 }
 
 #navbar p{
-	padding:0px	30px;
+	margin-top: 10px;
+	padding:0 30px;
 	font-size:1em;
 	color:#f9f9f9;
 	letter-spacing: 5px;
