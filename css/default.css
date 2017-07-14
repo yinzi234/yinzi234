@@ -29,14 +29,11 @@ section{
 }
 h3{
 	font-size: 23px;
-	color: #4693A6;
-	border-bottom: thick dotted #4693A6;
-	padding-bottom: 10px;
 }
 header {
     display:block;
     position:relative;
-    padding:0px;
+    padding:0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -87,17 +84,15 @@ code {
     word-wrap:break-word;
 }
 pre {
+	font-family: Monaco, 'MonacoRegular', 'Courier New', monospace !important;
     white-space: pre-wrap;
 	word-wrap: break-word;
-	background-color: #f5f2f0;
+	background-color: #002D7A !important;
 	padding: 2em 2em;
     overflow:hidden;
     margin-bottom:40px;
-    font-size:1.2em;
-	line-height: 30px;
-    border: 1px solid #eee;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
+    font-size:0.2em;
+	line-height: 18px;
     border-radius: 1em;
     color:slategray;
 	border:0.3em solid #e0dfcc;
@@ -116,6 +111,12 @@ pre code{
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight table{
+	width: 80%;
+	border-spacing: 0;
+	margin: auto;
+}
+
 
 .highlight .o { color: #FFFFFF } /* Operator */
 .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
@@ -135,7 +136,7 @@ pre code{
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
 .highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
 .highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #FFFFFF } /* Name.Function */
+.highlight .nf { color: #002D7A; } /* Name.Function */
 .highlight .nl { color: #A0A000 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */

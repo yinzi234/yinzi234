@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5e1cbff-43f5-42a3-800d-9c89f5a38ff1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-6-26-learning-of-Vue.md" afterPath="$PROJECT_DIR$/_posts/2016-6-26-learning-of-Vue.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-6-6-learning-of-Ajax.md" afterPath="$PROJECT_DIR$/_posts/2016-6-6-learning-of-Ajax.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-10-learning-of-css3.md" afterPath="$PROJECT_DIR$/_posts/2016-5-10-learning-of-css3.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-10-learning-of-svg.md" afterPath="$PROJECT_DIR$/_posts/2016-5-10-learning-of-svg.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-23-learning-of-html5.md" afterPath="$PROJECT_DIR$/_posts/2016-5-23-learning-of-html5.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-5-27-learning-of-正则.md" afterPath="$PROJECT_DIR$/_posts/2016-5-27-learning-of-正则.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-6-30-learning-of-Angular.md" afterPath="$PROJECT_DIR$/_posts/2016-6-30-learning-of-Angular.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-7-7-learning-of-css上.md" afterPath="$PROJECT_DIR$/_posts/2016-7-7-learning-of-css上.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-7-8-learning-of-css下.md" afterPath="$PROJECT_DIR$/_posts/2016-7-8-learning-of-css下.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/default.css" afterPath="$PROJECT_DIR$/css/default.css" />
     </list>
     <ignored path="yinzi234.iws" />
@@ -39,8 +29,8 @@
       <file leaf-file-name="default.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6093943" vertical-offset="0" max-vertical-offset="5865">
-              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.37824476" vertical-offset="1309" max-vertical-offset="5882">
+              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -195,8 +185,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6093943" vertical-offset="0" max-vertical-offset="5865">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.37824476" vertical-offset="1309" max-vertical-offset="5882">
+          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
           <folding />
         </state>
       </provider>
