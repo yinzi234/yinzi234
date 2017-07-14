@@ -87,13 +87,11 @@ pre {
 	font-family: Monaco, 'MonacoRegular', 'Courier New', monospace !important;
     white-space: pre-wrap;
 	word-wrap: break-word;
-	background-color: #002D7A !important;
 	padding: 2em 2em;
     overflow:hidden;
     margin-bottom:40px;
     font-size:0.2em;
 	line-height: 18px;
-    border-radius: 1em;
     color:slategray;
 	border:0.3em solid #e0dfcc;
 }
@@ -112,9 +110,13 @@ pre code{
 .highlight  { background: #f8f8f8; }
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight table{
-	width: 80%;
+	width: 95%;
 	border-spacing: 0;
 	margin: auto;
+	border-color: gray;
+}
+.gutter{
+	background-color: #eee !important;
 }
 
 
