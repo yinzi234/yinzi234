@@ -24,13 +24,15 @@
     width: 80%;
     margin-left: 10%;
 }
+.list-title,.list-title{
+    width: 20%;
+    color: #ffffff;
+}
 .list-title a{
     color: #ffffff;
     margin-right: 10%;
+    text-align: right;
 
-}
-.list-title{
-    float:right;
 }
 .list-span{
     width: 60%;
