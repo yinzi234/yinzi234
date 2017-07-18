@@ -24,9 +24,10 @@
     width: 80%;
     margin-left: 10%;
 }
-.list-title,.list-date{
+.list-title a{
     color: #ffffff;
-    width: 20%;
+    margin-right: 10%;
+
 }
 .list-title{
     float:right;
