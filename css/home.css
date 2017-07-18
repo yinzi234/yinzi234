@@ -8,3 +8,8 @@
 .logo-image img{
     width: 100%;
 }
+li{
+    width: 80%;
+    height: 40px;
+    margin: auto;
+}
