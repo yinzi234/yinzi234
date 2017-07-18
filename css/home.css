@@ -8,8 +8,19 @@
 .logo-image img{
     width: 100%;
 }
-li{
-    width: 80%;
-    height: 40px;
-    margin: auto;
+/*li{*/
+    /*width: 80%;*/
+    /*height: 40px;*/
+    /*margin: auto;*/
+/*}*/
+/*ul{*/
+    /*width: 30%;*/
+    /*float: left;*/
+/*}*/
+/*#ul-first{*/
+    /*margin-left: 10%;*/
+/*}*/
+.list-title,.list-date{
+    width: 20%;
+    width: 40px;
 }

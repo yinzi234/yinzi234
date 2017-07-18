@@ -10,9 +10,12 @@ title: 阿虚的二次元空间
 
 <center><div class="logo-image"><img src="log.jpg" alt="阿虚logo" /></div></center>
 
-<ul>
-　　{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　　{% endfor %}
-</ul>
-
+<table id="list">
+	{% for post in site.posts %}
+ 	 <tr>
+    	<td class="list-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
+    	<td class="list-span"><p><span></span></p></td>
+    	<td class="list-date">{{ post.date | date_to_string }}</td>
+ 	 </tr>
+  	{% endfor %}
+</table>
