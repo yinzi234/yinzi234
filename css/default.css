@@ -22,7 +22,6 @@ h2 {
 	padding: 15px 9px 15px 11px;
 	margin-bottom: 20px;
 	font-size: 36px;
-	text-align: center;
 }
 section{
 	display:none;
@@ -111,7 +110,7 @@ pre code{
 .highlight table{
 	width: 95%;
 	border-spacing: 0;
-	margin: auto;
+	margin: 20px auto;
 	border: 1px solid #dedede !important;
 }
 .gutter{
