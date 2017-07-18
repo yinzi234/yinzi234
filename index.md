@@ -15,7 +15,7 @@ title: 阿虚的二次元空间
  	 <tr>
     	<td class="list-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
     	<td class="list-span"><p><span></span></p></td>
-    	<td class="list-date">{{ post.date | date_to_string }}</td>
+    	<td class="list-date"><p>{{ post.date | date_to_string }}</p></td>
  	 </tr>
   	{% endfor %}
 </table>
