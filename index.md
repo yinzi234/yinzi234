@@ -12,7 +12,6 @@ title: 阿虚的二次元空间
 
 <ul>
 　　{% for post in site.posts %}
-	```<center><li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li></center>
 	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　{% endfor %}
 </ul>
