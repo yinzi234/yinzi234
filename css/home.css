@@ -23,16 +23,17 @@
 #list {
     width: 80%;
     margin-left: 10%;
+    font-size: 18px;
 }
-.list-title,.list-title{
-    width: 20%;
-    color: #ffffff;
+.list-title{
+    text-align: right;
 }
 .list-title a{
     color: #ffffff;
     margin-right: 10%;
-    text-align: right;
-
+}
+.list-date{
+    color: #ffffff;
 }
 .list-span{
     width: 60%;
