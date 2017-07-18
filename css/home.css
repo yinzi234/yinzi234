@@ -21,6 +21,7 @@
     /*margin-left: 10%;*/
 /*}*/
 #list {
+    margin-top: 50px;
     width: 80%;
     margin-left: 10%;
     font-size: 18px;
@@ -34,9 +35,6 @@
 }
 .list-date{
     color: #ffffff;
-}
-.list-span{
-    width: 60%;
 }
 .list-span span{
     width: 100%;
