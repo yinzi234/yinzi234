@@ -22,8 +22,14 @@
 /*}*/
 #list {
     margin: 50px auto;
-    width: 80%;
+    width: 100%;
     font-size: 18px;
+}
+#list p{
+
+}
+td{
+    line-height: 50px;
 }
 .list-title{
     width: 50%;
@@ -31,13 +37,16 @@
 }
 .list-title a{
     color: #ffffff;
-    margin-right: 10%;
+    margin-right: 3%;
 }
 .list-date{
     color: #ffffff;
 }
+.list-span{
+    width: 1px;
+}
 .list-span span{
     width: 100%;
-    border-bottom:2px dotted #fff;
+    border-bottom:1.4em dotted #fff;
     display: block;
 }
