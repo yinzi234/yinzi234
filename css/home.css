@@ -26,7 +26,7 @@
     font-size: 18px;
 }
 #list p{
-
+    margin: 0px;
 }
 td{
     line-height: 50px;
