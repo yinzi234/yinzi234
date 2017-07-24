@@ -366,7 +366,10 @@ implicit_flush   //作用同ob_implicit_flush，默认为Off。
 
 ## 网站并发 ##
 
-测试工具：apache/bin/ab.exe  
+测试工具：
+```
+apache/bin/ab.exe
+```  
 用法：
 ```
 cmd{%apache-bin%}>ab.exe -n 执行访问次数 -c 用户并发数量 URL地址  
