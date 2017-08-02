@@ -54,17 +54,25 @@ for (条件初始化表达式; 条件判断表达式; 条件变化表达式) {
 
 ### goto ###
 
-用来跳转到程序中的某一指定位置  
-该目标位置可以用目标名称 加上冒号来标记。  
-PHP中的goto有一定限制，只能在同一个文件和作用域中跳转，  
-    * 也就是说你无法跳出一个函数或类方法，也无法跳入到另一个函数。  
-    * 你也无法跳入到任何循环或者switch结构中。  
-    * 常见的用法是用来跳出循环或者switch，可以代替多层的break。   
-可以从循环(switch)中跳出来，但不能从外部跳转进去。而函数或类方法，向外向内均不可。  
-goto a;  
-echo 'Foo';  
-a:  
-echo 'Bar';    
+PHP的GOTO语法可以跳转到指定位置，如代码所示，goto display，在代码后面定义了一个display:,这样当执行goto display语句时，会跳到定义display的地方开始执行，这是PHP5.3增加的语法，支持PHP7.  
+
+```
+public function index()
+{
+    if (!I('get.search')) {
+        goto display;
+    }
+ 
+    //此处省略
+ 
+    $this->assign('account', self::$account);
+    $this->assign('pay_type', I('get.pay_type'));
+    $this->assign('list', $list);
+ 
+    display:
+    $this->display();
+}
+```
 
 ### 文件加载 ###
 

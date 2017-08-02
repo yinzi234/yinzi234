@@ -29,13 +29,22 @@ $tx1=hello. $tx2=$tx1."world",则$tx2就是"helloworld",也可是.=
 
 ### 命名规则 ###
 
-* 常量名 类常量建议全大写，单词间用下划线分隔    // MIN_WIDTH  
-* 变量名建议用下划线方式分隔            // $var_name  
-* 函数名建议用驼峰命名法                // varName  
-* 定界符建议全大写                 // <<<DING, <<<'DING'  
-* 文件名建议全小写和下划线、数字        // func_name.php  
-* 私有属性名、方法名建议加下划线        // private $_name _func  
-* 接口名建议加I_                    // interface I_Name  
+```
+*  类文件都是以 .class.php 为后缀（这里是指的 ThinkPHP 内部使用的类库文件，不代表外部加载的类库文件），使用驼峰法命名，并且首字母大写，例如 DbMysql.class.php 。
+*  函数、配置文件等其他类库文件之外的一般是以 .php 为后缀（第三方引入的不做要求）。
+*  确保文件的命名和调用大小写一致，是由于在类 Unix 系统上面，对大小写是敏感的（而 ThinkPHP 在调试模式下面，即使在 Windows 平台也会严格检查大小写）。
+*  类名和文件名一致（包括上面说的大小写一致），例如 UserAction 类的文件命名是 UserAction.class.php ， InfoModel 类的文件名是 InfoModel.class.php ，
+*  函数的命名使用小写字母和下划线的方式，例如 get_client_ip
+*  Action 控制器类以 Action 为后缀，例如 UserAction 、 InfoAction
+*  模型类以 Model 为后缀，例如 UserModel 、 InfoModel
+*  方法的命名使用驼峰法，并且首字母小写，例如 getUserName
+*  属性的命名使用驼峰法，并且首字母小写，例如 tableName
+*  以双下划线“ __ ”打头的函数或方法作为魔法方法，例如 __call 和 __autoload
+*  常量以大写字母和下划线命名，例如 HAS_ONE 和 MANY_TO_MANY
+*  配置参数以大写字母和下划线命名，例如 HTML_CACHE_ON
+*  语言变量以大写字母和下划线命名，例如 MY_LANG ，以下划线打头的语言变量通常用于系统语言变量，例如 _CLASS_NOT_EXIST_ 。
+*  数据表和字段采用小写加下划线方式命名，例如 think_user 和 user_name
+```
 
 ### 语言结构 ###
 
@@ -64,9 +73,28 @@ php_sapi_name() //返回一个PHP与WEB服务器接口类型的小写字符串
 
 ### 大小写问题 ###
 
-- 类名、方法名、属性名、函数名：不区分大小写  
-- 变量名、常量名、元素下标：区分大小写  
+1. 变量名区分大小写 
+	所有变量均区分大小写，包括普通变量以以及$_GET, $_POST, $_REQUEST, $_COOKIE, $_SESSION, $GLOBALS, $_SERVER, $_FILES, $_ENV等；
+2. 常量名默认区分大小写，通常都写为大写  
 
+3. php.ini配置项指令区分大小写 
+	如 file_uploads = 1 不能写成 File_uploads = 1 
+
+4. 函数名、方法名、类名 不区分大小写，但推荐使用与定义时相同的名字 
+
+5. 魔术常量不区分大小写，推荐大写 
+		包括：__LINE__、__FILE__、__DIR__、__FUNCTION__、__CLASS__、__METHOD__、__NAMESPACE__。 
+
+6. NULL、TRUE、FALSE不区分大小写 
+
+7. 类型强制转换，不区分大小写，包括： 
+	* (int)，(integer) – 转换成整型 
+	* (bool)，(boolean) – 转换成布尔型 
+	* (float)，(double)，(real) – 转换成浮点型 
+	* (string) – 转换成字符串 
+	* (array) – 转换成数组 
+	* (object) – 转换成对象 
+	
 ### 可变标识符 ###
 
 * 可变变量  $i = 3; $k = 'i'; echo $$k; //输出3  
@@ -130,12 +158,12 @@ get_defined_vars    //返回由所有已定义变量所组成的数组(包括环
 ### 预定义常量 ##
 
 * FILE__            所在文件的绝对路径  
-* __LINE__            文件中的当前行号  
-* __DIR__            文件所在目录  
-* __FUNCTION__        函数名称  
-* __CLASS__            类的名称  
-* __METHOD__        类的方法名  
-* __NAMESPACE__        当前命名空间的名称  
+* \_\_LINE __            文件中的当前行号  
+* \_\_DIR__            文件所在目录  
+* \_\_FUNCTION__        函数名称  
+* \_\_CLASS__            类的名称  
+* \_\_METHOD__        类的方法名  
+* \_\_NAMESPACE__        当前命名空间的名称  
 
 ### 整型 ###
 
@@ -146,10 +174,10 @@ get_defined_vars    //返回由所有已定义变量所组成的数组(包括环
 
 只能十进制与其他进制进行转换，只有六种  
 转换时，参数应是字符串（即不可含八进制的“0”或十六进制的“0x”）  
-    dec  
-     bin  
-     oct  
-    hex  
+    	dec  
+     	bin  
+     	oct  
+    	hex  
 * hexdec()    十六进制转十进制        也可写hex2dec()  
 * dechex()    十进制转十六进制        也可写dec2hex()  
 * bindec()    二进制转十进制        也可写bin2dec()  

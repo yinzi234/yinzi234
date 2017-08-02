@@ -72,12 +72,40 @@ mysql_get_server_info() //取得MySQL服务器信息
   
 ### 魔术引号机制 ###
   
-自动为所有提交到服务器的数据增加特殊符号的转义。  
-当打开时，所有的单引号，双引号，反斜线和NULL字符都会被自动加上一个反斜线进行转义。这和addslashes()作用完全相同。
+当魔术引号打开时，所有的 '（单引号），"（双引号），\（反斜线）和 NULL 字符都会被自
+
+动加上一个反斜线进行转义。这和 addslashes() 作用完全相同。
+
+一共有三个魔术引号指令：
+
+* magic_quotes_gpc 影响到 HTTP 请求数据（GET，POST 和 COOKIE）。不能在运行时改
+变。在 PHP 中默认值为 on。 参见 get_magic_quotes_gpc()。
+
+* magic_quotes_runtime 如果打开的话，大部份从外部来源取得数据并返回的函数，包括从
+数据库和文本文件，所返回的数据都会被反斜线转义。该选项可在运行的时改变，在PHP 中的
+默认值为 off。 参见 set_magic_quotes_runtime() 和 get_magic_quotes_runtime
+()。
+
+* magic_quotes_sybase 如果打开的话，将会使用单引号对单引号进行转义而非反斜线。此选
+项会完全覆盖 magic_quotes_gpc。如果同时打开两个选项的话，单引号将会被转义成 ''。而双引号、反斜线 和 NULL 字符将不会进行转义。 如何取得其值参见 ini_get()。
 ```  
-php.ini配置：  
-    magic_quotes_gpc = Off  
-get_magic_quotes_gpc()  获取当前魔术引号机制的配置信息
+<?php  
+if (get_magic_quotes_gpc()) {  
+    function stripslashes_deep($value)  
+    {  
+        $value = is_array($value) ?  
+                    array_map('stripslashes_deep', $value) :  
+                    stripslashes($value);  
+  
+        return $value;  
+    }  
+  
+    $_POST = array_map('stripslashes_deep', $_POST);  
+    $_GET = array_map('stripslashes_deep', $_GET);  
+    $_COOKIE = array_map('stripslashes_deep', $_COOKIE);  
+    $_REQUEST = array_map('stripslashes_deep', $_REQUEST);  
+}  
+?>  
 ```  
 
 ## 错误处理 ##
@@ -222,6 +250,50 @@ bool PDOStatement::execute ([ array $input_parameters ] )
 表  ->  类  
 字段 ->  类属性  
 数据 ->  对象  
+
+AR模式:orm(对象关系映射);
+
+Create:一
+
+```
+$user = M(‘goods’); 
+$user->add()//添加数据 
+```
+
+二:
+
+```
+$user ->create(); 
+$user->add(); 
+ 
+Select: 
+$user ->M(‘goods’); 
+$user->find();//查询一条数据 
+ 
+$user->select();//查询多条数据 
+//phpfensi.com 
+Update: 
+$user=M(‘goods’); 
+$user->goods_name(‘kevin’);//需要修改的数据 
+$user->save();//更新操作 
+ 
+Delete: 
+$user=M(‘goods’); 
+$user=delete(‘1’);//删除主键为1的数据 
+```
+
+字段映射:就是可以把数据表中的字段指向表单中的name的属性,能隐藏数据表中的字段数据,比较安全;
+
+```
+Protected $map = array{ 
+         ‘name’ => ‘kevin’, 
+         ‘mail’  => ‘email’ 
+}; 
+```
+
+我们使用create方法创建数据对象的时候,会自动转换成定义的实际数据表字段,使用字段映射后,默认不会对读取的数据会自动处理.
+
+需要在配置文件中开启READ_DATA_MAP或者直接使用READ_DATA_MAP函数进行输出;
 
 ## Date/Time ##
 

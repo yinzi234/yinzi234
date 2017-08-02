@@ -5,6 +5,13 @@ title: php入门学习(5)
 
 ## 缩略图-水印 ##
 
+在使用php的函数生成缩略图的使用，缩略图很多情况下都会失真，这个时候需要有一些对应的解决方法。
+
+1. 用imagecreatetruecolor和imageCopyreSampled函数分别取代imagecreate和
+	imagecopyresized
+
+2. 给imagejpeg的第三个参数带上100(例:imagejpeg($ni,$toFile,100))
+
 * imagecopyresampled  重采样拷贝部分图像并调整大小  
     	bool imagecopyresampled ( resource $dst_image , resource 
 		$src_image , int $dst_x , int $dst_y , int $src_x , int $src_y , 
@@ -32,8 +39,8 @@ __parse_url__ — 解析URL，返回其组成部分
 
 ### 编码可用于交换多个变量 ###
 
-$a = '中国';  
-$b = '四川';  
+$a = '美国';  
+$b = '洛杉矶';  
 $a = urlencode($a);  
 $b = urlencode($b);  
 $a = $a.'&'.$b;  
@@ -268,10 +275,96 @@ function addFileToZip($path, $zip) {
 * is_uploaded_file($file) //判断是否为POST上传的文件
 
 ### 多文件上传 ###
+
+* 写一个html用来上传文件
+
 ```
-<input type="file" name="updfile[]" /> //HTML中以数组提交  
-$_FILES['updfile']['tmp_name'][0]   //服务器端可访问第一个文件的临时路径，其他属性类似 
-``` 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+<title>文件上传</title>  
+</head>  
+<body>  
+<form action="upload.php" method="post" enctype="multipart/form-data">  
+  文件1：<input type="file" name="img[]"/><br/>  
+  文件2：<input type="file" name="img[]"/><br/>  
+ <input type="submit" value="上传"/>  
+ </form>  
+</body>  
+</html>
+```  
+
+* 编写处理文件上传的php
+
+```
+<?php  
+header("Content-type: text/html; charset=utf-8");   
+  //echo "<pre>";  
+  //echo print_r($_FILES);  
+  //echo "</pre>";  
+   
+  //取得htdocs的路径  
+  $uploadpath=$_SERVER["DOCUMENT_ROOT"]."/mypic/";  
+  //判断文件类型，如果不是jpg则退出程序  
+  for($i=0;$i<count($_FILES["img"]["type"]);$i++){  
+    if($_FILES["img"]["type"][$i]!="image/jpeg"&&$_FILES["img"]["type"][$i]!=null){  
+      echo "flie type error;";  
+      header("Refresh:2;url=index.html");  
+      exit();  
+    }  
+  }  
+ for($i=0;$i<count($_FILES["img"]["name"]);$i++){  
+    $fileName=time().rand(1,200).substr($_FILES["img"]["name"][$i],strrpos($_FILES["img"]["name"][$i],"."));  
+    //转存文件(php文件的时候其实已经在服务器上生成了临时文件)  
+    if(move_uploaded_file($_FILES["img"]["tmp_name"][$i],$uploadpath.$fileName)){  
+       echo $_FILES["img"]["name"][$i]."  保存成功"."<br/>";  
+    }  
+ }  
+?>  
+```
+
+move_uploaded_file就是转存文件的方法，第一个参数为临时文件，第二个则是目标文件作用和copy方法类似。下面为了让大家看的清楚我把$_FILES贴出来
+
+```
+Array  
+(  
+    [img] => Array  
+        (  
+            [name] => Array  
+                (  
+                    [0] => 大海.jpg  
+                    [1] => 小树.jpg  
+                )  
+  
+            [type] => Array  
+                (  
+                    [0] => image/jpeg  
+                    [1] => image/jpeg  
+                )  
+  
+            [tmp_name] => Array  
+                (  
+                    [0] => C:\Windows\Temp\phpBAD8.tmp  
+                    [1] => C:\Windows\Temp\phpBAE9.tmp  
+                )  
+  
+            [error] => Array  
+                (  
+                    [0] => 0  
+                    [1] => 0  
+                )  
+  
+            [size] => Array  
+                (  
+                    [0] => 20251  
+                    [1] => 261851  
+                )  
+  
+        )  
+  
+)  
+```
 
 ### php.ini配置 ###
 
